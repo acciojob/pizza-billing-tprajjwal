@@ -30,24 +30,24 @@ public class Pizza {
         bill+="Base Price of Pizza: "+this.basePrice+"\n";
     }
 
-    public int getBasePrice(){
+    public int getPrice(){
         return this.basePrice;
     }
 
-    public void setCheeseAdded(){
+    public void addExtraCheese(){
         if(!isCheeseAdded){
             this.basePrice+=+80;
             this.isCheeseAdded=true;
         }
 
     }
-    public void setToppingAdded(){
+    public void addExtraToppings(){
         if(!isToppingAdded){
             this.basePrice+=this.toppingPrice;
             isToppingAdded=true;
         }
     }
-    public void setPaperBagAdded(){
+    public void addTakeaway(){
         if (!isPaperBagAdded) {
 
             this.basePrice+=20;
