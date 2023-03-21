@@ -26,31 +26,33 @@ public class Pizza {
             basePrice=400;
             toppingPrice=120;
         }
-        bill="";
+        paperBagPrice=20;
+        cheesePrice=80;
+        totalPrice=basePrice;
         bill+="Base Price of Pizza: "+this.basePrice+"\n";
     }
 
     public int getPrice(){
-        return this.basePrice;
+        return this.totalPrice;
     }
 
     public void addExtraCheese(){
         if(!isCheeseAdded){
-            this.basePrice+=+80;
+            this.totalPrice+=+cheesePrice;
             this.isCheeseAdded=true;
         }
 
     }
     public void addExtraToppings(){
         if(!isToppingAdded){
-            this.basePrice+=this.toppingPrice;
+            this.totalPrice+=this.toppingPrice;
             isToppingAdded=true;
         }
     }
     public void addTakeaway(){
         if (!isPaperBagAdded) {
 
-            this.basePrice+=20;
+            this.totalPrice+=paperBagPrice;
             isPaperBagAdded=true;
         }
     }
@@ -65,7 +67,7 @@ public class Pizza {
             if (isPaperBagAdded) {
                 this.bill += "Paperbag Added: 20"+"\n";
             }
-            this.bill += "Total Price: "+this.basePrice +"\n";
+            this.bill += "Total Price: "+this.totalPrice +"\n";
             isBillCreated = true;
             return this.bill;
         }
