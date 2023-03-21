@@ -13,7 +13,7 @@ public class Pizza {
     private boolean isPaperBagAdded;
     private boolean isBillCreated;
     public Pizza(boolean isVeg) {
-        this.isVeg = isVeg;
+//        this.isVeg = isVeg;
         isCheeseAdded=false;
         isToppingAdded=false;
         isPaperBagAdded=false;
@@ -33,13 +33,13 @@ public class Pizza {
     }
 
     public int getPrice(){
-        return this.totalPrice;
+        return totalPrice;
     }
 
     public void addExtraCheese(){
         if(!isCheeseAdded){
             this.totalPrice+=+cheesePrice;
-            this.isCheeseAdded=true;
+            isCheeseAdded=true;
         }
 
     }
